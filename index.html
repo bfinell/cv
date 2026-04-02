@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Benjamin Finell – CV</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10pt;
+      color: #222;
+      background: #fff;
+      line-height: 1.45;
+    }
+
+    a { color: #0075C9; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Page wrapper ---- */
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 28px 32px;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .header-info h1 {
+      font-size: 2.2em;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .header-info .contact {
+      color: #444;
+      font-size: 0.95em;
+      line-height: 1.8;
+    }
+
+    .header-photo img {
+      width: 90px;
+      height: 90px;
+      border-radius: 4px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .header-photo .photo-placeholder {
+      width: 90px;
+      height: 90px;
+      border-radius: 4px;
+      background: #e0e9f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75em;
+      color: #7a9ac0;
+      text-align: center;
+    }
+
+    /* ---- Section headings ---- */
+    h2 {
+      font-size: 1.05em;
+      font-weight: 700;
+      color: #0075C9;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-bottom: 1.5px solid #0075C9;
+      padding-bottom: 2px;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+
+    /* ---- Profile ---- */
+    .profile {
+      margin-bottom: 18px;
+    }
+
+    /* ---- Two-column body ---- */
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* ---- Experience / Education entries ---- */
+    .entry {
+      margin-bottom: 14px;
+    }
+
+    .entry-title {
+      font-weight: 700;
+      color: #111;
+    }
+
+    .entry-meta {
+      color: #555;
+      font-style: italic;
+      font-size: 0.93em;
+      margin-bottom: 4px;
+    }
+
+    .entry ul {
+      list-style: disc;
+      padding-left: 1.2em;
+      margin-top: 4px;
+    }
+
+    .entry ul li {
+      margin-bottom: 2px;
+    }
+
+    /* ---- Skills ---- */
+    .skills-list {
+      margin-bottom: 14px;
+    }
+
+    .skills-list p {
+      margin-bottom: 4px;
+    }
+
+    /* ---- Leadership ---- */
+    .leadership-item {
+      margin-bottom: 8px;
+    }
+
+    .leadership-item .role-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .leadership-item .role-line .role {
+      font-weight: 700;
+    }
+
+    .leadership-item .role-line .dates {
+      white-space: nowrap;
+      color: #555;
+      font-size: 0.93em;
+    }
+
+    /* ---- Languages ---- */
+    .languages p {
+      margin-bottom: 3px;
+    }
+
+    /* ---- Section spacing ---- */
+    .col section {
+      margin-bottom: 20px;
+    }
+
+    @media print {
+      body { font-size: 9.5pt; }
+      .page { padding: 14px 16px; max-width: 100%; }
+      a { color: #0075C9; }
+    }
+
+    @media (max-width: 650px) {
+      .columns { grid-template-columns: 1fr; }
+      .header { flex-direction: column-reverse; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+    <div class="header-info">
+      <h1>Benjamin Finell</h1>
+      <div class="contact">
+        Turku, Finland &nbsp;·&nbsp;
+        +358 40 0326056 &nbsp;·&nbsp;
+        <a href="mailto:benjamin.finell@gmail.com">benjamin.finell@gmail.com</a><br />
+        <a href="https://linkedin.com/in/benjamin-finell-aa1880207" target="_blank" rel="noopener">
+          linkedin.com/in/benjamin-finell-aa1880207
+        </a>
+      </div>
+    </div>
+    <div class="header-photo">
+      <img src="BenjaminFinell-1.jpg" alt="Benjamin Finell"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="photo-placeholder" style="display:none;">Photo</div>
+    </div>
+  </div>
+
+  <!-- ===== PROFILE ===== -->
+  <div class="profile">
+    <h2>Profile</h2>
+    <p>
+      I am an energetic, social and analytical computer engineer, experienced in full-stack
+      development, IoT systems and data-driven problem-solving. I thrive on taking initiative
+      and turning ideas into results, from founding a consultancy and securing long-term clients
+      to leading small technical teams. Passionate about innovation, sustainability, automation
+      and optimisation.
+    </p>
+  </div>
+
+  <!-- ===== TWO-COLUMN BODY ===== -->
+  <div class="columns">
+
+    <!-- ===== LEFT COLUMN ===== -->
+    <div class="col">
+      <section>
+        <h2>Experience</h2>
+
+        <div class="entry">
+          <div class="entry-title">Electrolyte AB, Åbo — Founder, CEO, Full-Stack Developer</div>
+          <div class="entry-meta">Aug 2024 – Present</div>
+          <ul>
+            <li>Designed, developed, and currently maintain a large-scale web application</li>
+            <li>Built full-stack solution using Django (backend) and React (frontend)</li>
+            <li>Worked directly with stakeholders to gather requirements, iterate features, and deliver a production-ready platform</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">Indmeas, Esbo — Software Developer</div>
+          <div class="entry-meta">May 2022 – Aug 2023</div>
+          <ul>
+            <li>Developed Python-based backend services for industrial measurement and monitoring systems</li>
+            <li>Developed and maintained IoT data ingestion pipelines from edge devices to cloud services</li>
+            <li>Built internal tools and dashboards for data visualisation and system monitoring</li>
+            <li>Collaborated with hardware, firmware, and product teams in an industrial environment</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">Walkbase (STRATACACHE), Åbo — Junior System Engineer</div>
+          <div class="entry-meta">Nov 2020 – Apr 2021</div>
+          <ul>
+            <li>Worked with system integrations and basic analytics workflows</li>
+            <li>Assisted in troubleshooting production issues and improving system reliability</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">Åbo Akademi University, Åbo — Teaching Assistant</div>
+          <div class="entry-meta">Sep 2019 – Apr 2022</div>
+          <ul>
+            <li>Teaching assistant for two Python programming courses per academic year over three years</li>
+            <li>One course aimed at undergraduate IT students, and one course aimed at business majors and students from other disciplines (mixed undergraduate and master's level)</li>
+            <li>Led exercise sessions, supported students with assignments, and assisted in grading</li>
+            <li>Helped explain programming concepts to both technical and non-technical audiences</li>
+          </ul>
+        </div>
+      </section>
+    </div><!-- /left col -->
+
+    <!-- ===== RIGHT COLUMN ===== -->
+    <div class="col">
+      <section>
+        <h2>Education</h2>
+
+        <div class="entry">
+          <div class="entry-title">Master's in Computer Engineering — Åbo Akademi University</div>
+          <div class="entry-meta">Sep 2020 – Dec 2025</div>
+          <p>Thesis: <em>Automating Life Cycle Assessment: Integrating Similarity Matching and AI for Scalable Environmental Calculations</em></p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">Exchange Semesters — Technical University of Graz</div>
+          <div class="entry-meta">Sep 2023 – Jul 2024</div>
+          <p>Spent two semesters at TU Graz with a focus on innovation and business informatics</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">Bachelor's in Computer Engineering — Åbo Akademi University</div>
+          <div class="entry-meta">Sep 2016 – Oct 2020</div>
+          <p>Thesis: <em>A Comparison between Unikernels and Containers</em></p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="skills-list">
+          <p><strong>Programming:</strong> Python, Java, JavaScript, C++, SQL</p>
+          <p><strong>Frameworks:</strong> FastAPI, Flask, Django, React</p>
+          <p><strong>Tools:</strong> Git, Docker, Linux, PostgreSQL, REST APIs, Grafana</p>
+          <p><strong>IoT:</strong> LoRaWAN, embedded sensor integration</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Leadership &amp; Volunteering</h2>
+
+        <div class="leadership-item">
+          <div class="role-line">
+            <span class="role">President</span>
+            <span class="dates">Jan 2022 – Dec 2022</span>
+          </div>
+          <div>Datateknologernas Idrottsklubb — Founded and led a university sports club.</div>
+        </div>
+
+        <div class="leadership-item">
+          <div class="role-line">
+            <span class="role">Councilor</span>
+            <span class="dates">Jan 2020 – Dec 2021</span>
+          </div>
+          <div>Åbo Akademis Studentkår — Represented the Faculty of Technology and Science students in university governance.</div>
+        </div>
+
+        <div class="leadership-item">
+          <div class="role-line">
+            <span class="role">Board Member</span>
+            <span class="dates">Jan 2018 – Dec 2018</span>
+          </div>
+          <div>Datateknologerna vid Åbo Akademi r.f.</div>
+        </div>
+
+        <div class="leadership-item">
+          <div class="role-line">
+            <span class="role">Tutor</span>
+            <span class="dates">2017–2018, 2019–2020</span>
+          </div>
+          <div>Åbo Akademi University</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Languages</h2>
+        <div class="languages">
+          <p><strong>Swedish:</strong> Native</p>
+          <p><strong>English:</strong> C1/C2</p>
+          <p><strong>German:</strong> A2/B1</p>
+          <p><strong>Finnish:</strong> A2</p>
+        </div>
+      </section>
+    </div><!-- /right col -->
+
+  </div><!-- /columns -->
+</div><!-- /page -->
+</body>
+</html>
